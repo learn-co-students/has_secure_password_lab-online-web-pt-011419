@@ -4,11 +4,13 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
 
     if @user.save
-      redirect_to welcome_path
+      redirect_to "/"
     else
       redirect_to new_user_path
     end
   end
+
+
  
   private
  
